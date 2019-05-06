@@ -1,0 +1,11 @@
+{
+  "type": "mongodb",
+  "host": "localhost",
+  "database": "jonge",
+  "synchronize": true,
+  "logging": false,
+  "entities": [
+    "src/**/*.entity.ts"
+  ],
+  "useNewUrlParser": true
+}
