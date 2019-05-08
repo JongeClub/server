@@ -7,5 +7,6 @@ import {Api} from './api.entity'
   imports: [TypeOrmModule.forFeature([Api])],
   controllers: [ApiController],
   providers: [ApiService],
+  exports: [ApiService]
 })
 export class ApiModule {}

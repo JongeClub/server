@@ -10,5 +10,6 @@
     "outDir": "./dist",
     "baseUrl": "./"
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "include": ["./src/mock/faker/json-schema-faker.d.ts"]
 }

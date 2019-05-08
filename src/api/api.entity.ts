@@ -1,4 +1,6 @@
 import { Column, Entity, ObjectID, ObjectIdColumn } from 'typeorm';
+import { HttpMethod } from 'src/const/schema.const';
+import { IsNotEmpty } from 'class-validator';
 
 @Entity()
 export class Api {
@@ -6,12 +8,19 @@ export class Api {
   id: ObjectID;
 
   @Column()
+  @IsNotEmpty()
+  method: HttpMethod
+
+  @Column()
+  @IsNotEmpty()
   schema: string;
 
   @Column()
+  @IsNotEmpty()
   host: string;
 
   @Column()
+  @IsNotEmpty()
   path: string;
 
   @Column()

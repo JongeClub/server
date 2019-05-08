@@ -4,8 +4,9 @@ import { Api } from './api.entity';
 import { getRepositoryToken } from '@nestjs/typeorm'
 
 const mockData = [
-  { id: 1, email: 'test1@email.com', password: '' },
-  { id: 2, email: 'valid@email.com', password: '' },
+  { id: 1, schema: 'https', host: 'jonge.club', path: '/demo/list', response: {} },
+  { id: 1, schema: 'https', host: 'jonge.club', path: '/demo/:id', response: { msg: { type:'const', value: '1 variable in path' } } },
+  { id: 2, schema: 'https', host: 'jonge.club', path: '/demo/:id/detai/{prop}', response: { msg: { type: 'const', value: '2 variables in path' } } },
 ]
 const mockRepository = {
   find(offset, limit) {

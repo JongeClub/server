@@ -20,6 +20,7 @@ export class ApiController {
 
   @Post()
   async create(@Body() api: Api) {
+    // TODO: validate and throw or set default value
     return await this.apiService.create(api)
   }
 
